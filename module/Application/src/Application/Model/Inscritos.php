@@ -10,7 +10,7 @@ class Inscritos extends AbstractTableGateway{
     protected  $table = 'inscritos';
     public function __construct(Adapter $adapter)
     {
-        return parent::__construct($adapter);
+        $this->adapter = $adapter;
     }
 
     public function save($form){

@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/texai/www/pcsv/module/Application/view/application/index/validar.phtml</file>
-            <file>file:/Users/texai/www/pcsv/module/Application/view/application/index/index.phtml</file>
-            <file>file:/Users/texai/www/pcsv/module/Application/src/Application/Controller/IndexController.php</file>
-            <file>file:/Users/texai/www/pcsv/module/Application/src/Application/Model/Inscritos.php</file>
-            <file>file:/Users/texai/www/pcsv/module/Application/view/application/index/save.phtml</file>
+            <file>file:/D:/Zend/Apache2/htdocs/pcsv/module/Application/src/Application/Controller/IndexController.php</file>
+            <file>file:/D:/Zend/Apache2/htdocs/pcsv/module/Application/src/Application/Model/Inscritos.php</file>
+            <file>file:/D:/Zend/Apache2/htdocs/pcsv/vendor/zendframework/zendframework/library/Zend/Db/Sql/Select.php</file>
         </group>
     </open-files>
 </project-private>
