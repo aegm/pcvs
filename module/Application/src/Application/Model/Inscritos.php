@@ -1,15 +1,16 @@
 <?php
 
 namespace Application\Model;
-//use Zend\Db\Sql\Sql;
-use Zend\Db\Adapter\Adapter;
-use Zend\Db\TableGateway\TableGateway;
+use Zend\Db\Sql\Select;
 
-class Inscritos extends TableGateway{
-        
-     public function __construct(Adapter $adapter = null, $databaseSchema = null, ResultSet $selectResultPrototype = null)
+use Zend\Db\TableGateway\AbstractTableGateway;
+use Zend\Db\Adapter\Adapter;
+
+class Inscritos extends AbstractTableGateway{
+    protected  $table = 'inscritos';
+    public function __construct(Adapter $adapter)
     {
-        return parent::__construct('inscritos', $adapter, $databaseSchema, $selectResultPrototype);
+        return parent::__construct($adapter);
     }
 
     public function save($form){
@@ -41,12 +42,20 @@ class Inscritos extends TableGateway{
     }
 
     public function verifica_registro($dni){
-        $resultSet = $this->select(array('num_doc' => $dni));
+        /*$resultSet = $this->select(array('num_doc' => $dni));
         if (0 === $resultSet->count()) {
             return;
         }
         $row = $resultSet->current();
-        return $row;
+        return $row;*/
+        
+     $select = new Select();
+     $select->from($this->table);
+     
+     $resultSet = $this->selectWith($select);
+     $resultSet->buffer();
+     return $resultSet;
+        
     }
     
 }

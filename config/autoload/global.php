@@ -12,5 +12,12 @@
  */
 
 return array(
-    // ...
+   'service_manager' => array(
+        'factories' => array(
+          'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',  
+        ),
+        'abstract_factories' => array(
+                'Zend\Db\Adapter\AdapterAbstractServiceFactory',
+        ),
+    )
 );

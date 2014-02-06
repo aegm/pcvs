@@ -50,9 +50,9 @@ class IndexController extends AbstractActionController {
 
     public function validarAction(){
         $dni = $this->getRequest()->getPost('dni');
-        $this->dbAdapter = $this->getServiceLocator()->get('Zend\Db\Adapter');
-        $o_inscrito = new Inscritos($this->dbAdapter);
-        $res = $o_inscrito->verifica_registro($dni);
+        $this->dbAdapter = $this->getServiceLocator()->get('db_one');
+        //$o_inscrito = new Inscritos($this->dbAdapter);
+        //$res = $o_inscrito->verifica_registro($dni);
     }
     
     public function saveAction(){
